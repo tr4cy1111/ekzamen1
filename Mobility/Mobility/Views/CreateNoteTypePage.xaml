@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobility.Views.CreateNoteTypePage"
+             Shell.FlyoutItemIsVisible="True"
+             Shell.NavBarIsVisible="True"
+             Shell.NavBarHasShadow="True"
+             Title="Создать категорию">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="Center" Margin="0, 15, 0, 0" >
+
+                <Entry Placeholder="Тип" 
+                           PlaceholderColor="Gray"  
+                           x:Name="noteTypeName" 
+                           Text="{Binding NoteType}"
+                           TextColor="Black"
+                           BackgroundColor="#e8e8e8"
+                           HeightRequest="60"
+                           Margin="40, 7, 40, 550"/>
+
+                <FlexLayout Direction="RowReverse"  JustifyContent="Center" HorizontalOptions="Center">
+                    <Button Text="Сохранить" 
+                        CornerRadius="200" 
+                        BackgroundColor="#502c24" 
+                        TextColor="White" 
+                        x:Name="addNoteTypeBtn" 
+                        Clicked="addNoteTypeBtn_Clicked"
+                        HeightRequest="49"
+                        WidthRequest="149"
+                        FontSize="20"
+                        Margin="0, 10, 11, 0"/>
+
+                    <Button Text="Отмена" 
+                        CornerRadius="200" 
+                        BackgroundColor="#80544c" 
+                        TextColor="White" 
+                        x:Name="cancelBtn" 
+                        Clicked="cancelBtn_Clicked"
+                        HeightRequest="49"
+                        WidthRequest="149"
+                        FontSize="20"
+                        Margin="0, 10, 11, 0"/>
+
+                </FlexLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

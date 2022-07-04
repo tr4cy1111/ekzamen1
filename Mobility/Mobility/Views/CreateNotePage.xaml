@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobility.Views.CreateNotePage"
+             Title="         Создать Запись">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="Center" Margin="0, 15, 0, 0" >
+                <Picker x:Name="PNoteType"
+                        ItemsSource="{Binding NoteType}"
+                        ItemDisplayBinding="{Binding Name}"
+                        Background="#e8e8e8"
+                        HeightRequest="50"
+                        Margin="40, 7, 40, 0"/>
+
+                <Picker 
+                        x:Name="PExpenseType"
+                        ItemsSource="{Binding ExpenseType}"
+                        ItemDisplayBinding="{Binding Name}"
+                        Background="#e8e8e8"
+                        Margin="40, 7, 40, 0"   
+                        HeightRequest="50"/>
+
+
+                <Entry     
+                           Placeholder="Сумма"
+                           TextChanged="ESumm_TextChanged"
+                           PlaceholderColor="Gray"  
+                           x:Name="ESumm"
+                           Text="{Binding Name}"
+                           TextColor="Black"
+                           Margin="40, 7, 40, 0"
+                           BackgroundColor="#e8e8e8"
+                           HeightRequest="50"/>
+
+                <DatePicker 
+                            x:Name="dp_date"
+                            Margin="40, 7, 40, 0"
+                            BackgroundColor="#e8e8e8"
+                            HeightRequest="50"/>
+
+                <Editor x:Name="e_description"
+                        Margin="40, 7, 40, 0"
+                        BackgroundColor="#e8e8e8"
+                        Placeholder="Описание"
+                        HeightRequest="200"/>
+
+                <FlexLayout Direction="RowReverse" Margin="0,150,0,0" JustifyContent="Center" HorizontalOptions="Center">
+
+                    <Button Text="Сохранить" 
+                        CornerRadius="200" 
+                        BackgroundColor="#502c24" 
+                        TextColor="White" 
+                        x:Name="BtnAddNote" 
+                        HeightRequest="49"
+                        WidthRequest="149"
+                        FontSize="9.6"
+                        Margin="0, 30, 11, 0"
+                        Clicked="BtnAddNote_Clicked"/>
+
+                    <Button Text="Отмена" 
+                        CornerRadius="200" 
+                        BackgroundColor="#80544c" 
+                        TextColor="White" 
+                        x:Name="BtnBack"
+                        HeightRequest="49"
+                        WidthRequest="149"
+                        FontSize="9.6"
+                        Margin="0, 30, 11, 0"
+                        Clicked="BtnBack_Clicked"/>
+                </FlexLayout>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

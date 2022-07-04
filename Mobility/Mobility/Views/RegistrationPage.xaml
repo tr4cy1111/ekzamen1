@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobility.Views.RegistrationPage"
+             Shell.FlyoutItemIsVisible="False"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False"
+             Shell.NavBarHasShadow="False"
+             Title="Регистрация">
+    <ContentPage.Content>
+        <FlexLayout Direction="Column" Margin="40,10,40,10">
+            <StackLayout>
+                <Entry BackgroundColor="#e8e8e8"
+                   Placeholder="Логин" 
+                   Margin="0,35,0,0" 
+                   HeightRequest="60"
+                   x:Name="login"/>
+
+                <FlexLayout>
+                    <Entry BackgroundColor="#e8e8e8"
+                           Placeholder="Пароль" 
+                           Margin="0,15,0,0"
+                           WidthRequest="250"
+                           HeightRequest="60"
+                           x:Name="pass1"
+                           IsPassword="True"/>
+                    
+                    <ImageButton Source="eye.png"
+                                 Clicked="firstEye_Clicked"
+                                 x:Name="firstEye"
+                                 Aspect="AspectFit"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="CenterAndExpand"
+                                 WidthRequest="50"
+                                 HeightRequest="50"
+                                 CornerRadius="50"
+                                 BackgroundColor="#502c24"
+                                 Margin="10,15,0,0">
+
+                    </ImageButton>
+                </FlexLayout>
+
+
+                <FlexLayout>
+                    <Entry BackgroundColor="#e8e8e8"
+                           Placeholder="Повтор Пароля" 
+                           Margin="0,15,0,0"
+                           WidthRequest="250"
+                           HeightRequest="60"
+                           x:Name="pass2"
+                           IsPassword="True"/>
+                    <ImageButton Source="eye.png"
+                                 Clicked="secondEye_Clicked"
+                                 x:Name="secondEye"
+                                 Aspect="AspectFit"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="CenterAndExpand"
+                                 WidthRequest="50"
+                                 HeightRequest="50"
+                                 CornerRadius="50"
+                                 BackgroundColor="#502c24"
+                                 Margin="10,15,0,0">
+
+                    </ImageButton>
+                    
+                </FlexLayout>
+                <Entry BackgroundColor="#e8e8e8"
+                   Placeholder="Почта" 
+                   Margin="0,15,0,0" 
+                   HeightRequest="60"
+                   x:Name="Email"/>
+
+            </StackLayout>
+
+            <StackLayout Margin="0,360,0,0" Orientation="Horizontal">
+                <Button 
+                    x:Name="BtnClose"
+                    Clicked="BtnClose_Clicked"
+                    Text="Отмена" 
+                    CornerRadius="200"
+                    FontSize="14"
+                    WidthRequest="120"
+                    HeightRequest="49"
+                    BackgroundColor="#80544c"
+                    TextColor="White"/>
+                
+                <Button x:Name="regBtn"
+                    Clicked="regBtn_Clicked"
+                    Text="Зарегистрироваться" 
+                    CornerRadius="200"
+                    FontSize="13"
+                    WidthRequest="180"
+                    HeightRequest="49"
+                    BackgroundColor="#502c24"
+                    TextColor="White"/>
+            </StackLayout>
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>

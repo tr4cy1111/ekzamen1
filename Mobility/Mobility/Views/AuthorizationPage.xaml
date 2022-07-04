@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobility.Views.AuthorizationPage"
+             Shell.FlyoutItemIsVisible="False"
+             Shell.NavBarIsVisible="False"
+             Shell.NavBarHasShadow="False"
+             Background="White">
+    <ContentPage.Content>
+        <FlexLayout Direction="Column" Margin="40,10,40,10">
+            <Button
+                Margin="0, 50"
+                x:Name="loadingBtn"
+                WidthRequest="310"
+                HeightRequest="150"
+                BorderColor="#983201"
+                BackgroundColor="white"
+                BorderWidth="5"
+                Text="Finance"
+                TextColor="#983201"
+                FontSize="54"
+                FontAttributes="Bold">
+            </Button>
+            <StackLayout>
+                <Image />
+                <Entry BackgroundColor="#e8e8e8"
+                   Placeholder="Имя" 
+                   Margin="0,35,0,0" 
+                   HeightRequest="60"
+                   x:Name="login"/>
+
+                <FlexLayout>
+                    <Entry BackgroundColor="#e8e8e8"
+                           Placeholder="Пароль" 
+                           Margin="0,35,0,0"
+                           WidthRequest="250"
+                           HeightRequest="60"
+                           x:Name="pass1"
+                           IsPassword="True"/>
+
+                    <ImageButton Source="eye.png"
+                                 Clicked="firstEye_Clicked"
+                                 x:Name="firstEye"
+                                 Aspect="AspectFit"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="CenterAndExpand"
+                                 WidthRequest="50"
+                                 HeightRequest="50"
+                                 CornerRadius="50"
+                                 BackgroundColor="#80544c"
+                                 Margin="10,35,0,0">
+
+                    </ImageButton>
+                </FlexLayout>
+                <Button BackgroundColor="Transparent" x:Name="BtnReg" Clicked="BtnReg_Clicked" 
+                        Margin="0,-15,0,0" FontSize="14" Text="
+                        
+                        
+                        
+                        Нет Аккаунта?
+                        Зарегистрироваться"/>
+            </StackLayout>
+
+            <StackLayout Margin="25,100,25,0">
+                <Button x:Name="regAuth"
+                    Clicked="regAuth_Clicked"
+                    Text="Войти" 
+                    CornerRadius="200"
+                    FontSize="18"
+                    WidthRequest="109"
+                    HeightRequest="49"
+                    BackgroundColor="#80544c"
+                    TextColor="White"/>
+            </StackLayout>
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>

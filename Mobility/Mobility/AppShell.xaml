@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobility.AppShell"
+             xmlns:local="clr-namespace:Mobility.Views"
+             Shell.BackgroundColor="#80544c"
+             Shell.ForegroundColor="White">
+   
+
+    <FlyoutItem  Shell.FlyoutItemIsVisible="False"
+                Shell.NavBarHasShadow="False" Shell.NavBarIsVisible="False" Icon="icon_about.png">
+        <ShellContent Route="LoadingPage" ContentTemplate="{DataTemplate local:LoadingPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Shell.FlyoutItemIsVisible="False"
+                Shell.NavBarHasShadow="False" Shell.NavBarIsVisible="False" Icon="icon_about.png">
+        <ShellContent Route="AuthorizationPage" ContentTemplate="{DataTemplate local:AuthorizationPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem  Shell.FlyoutItemIsVisible="False"
+             Shell.NavBarHasShadow="False">
+        <ShellContent Route="RegistrationPage" ContentTemplate="{DataTemplate local:RegistrationPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Последние Расходы" IsVisible="True" Icon="icon_about.png">
+        <ShellContent Route="NotePage" ContentTemplate="{DataTemplate local:NotePage}" />
+    </FlyoutItem>
+    
+    <FlyoutItem Title="Cоздать категории" IsVisible="True" Icon="icon_about.png">
+        <ShellContent Route="CreateNoteTypePage" ContentTemplate="{DataTemplate local:CreateNoteTypePage}" />
+    </FlyoutItem>
+</Shell>

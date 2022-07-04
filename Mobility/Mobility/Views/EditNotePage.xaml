@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobility.Views.EditNotePage"
+             Title="Изменить запись">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="bin.png" Order="Primary" x:Name="Deleted" Clicked="Deleted_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="Center" Margin="0, 15, 0, 0" >
+                <Picker x:Name="NoteTypes"
+                        ItemsSource="{Binding NoteType}"
+                        ItemDisplayBinding="{Binding Name}"
+                        Background="#e8e8e8"
+                        HeightRequest="50"
+                        Margin="40, 7, 40, 0"/>
+
+                <Picker x:Name="ExpenseTypes"
+                        ItemsSource="{Binding ExpenseType}"
+                        ItemDisplayBinding="{Binding Name}"
+                        Background="#e8e8e8"
+                        Margin="40, 7, 40, 0"   
+                        HeightRequest="50"/>
+
+
+                <Entry     
+                           Placeholder="Сумма" 
+                           PlaceholderColor="Gray"  
+                           x:Name="ESumm"
+                           TextColor="Black"
+                           Margin="40, 7, 40, 0"
+                           BackgroundColor="#e8e8e8"
+                           HeightRequest="50"/>
+
+                <Editor Margin="40, 7, 40, 0"
+                        x:Name="Description"
+                        BackgroundColor="#e8e8e8"
+                        Placeholder="Описание"
+                        HeightRequest="200"/>
+
+                <FlexLayout Direction="RowReverse" Margin="0,150,0,0" JustifyContent="Center" HorizontalOptions="Center">
+
+                    <Button Text="Сохранить" 
+                        CornerRadius="200" 
+                        BackgroundColor="#502c24" 
+                        TextColor="White" 
+                        x:Name="BtnAddNote" 
+                        HeightRequest="49"
+                        Clicked="BtnAddNote_Clicked"
+                        WidthRequest="149"
+                        FontSize="9.6"
+                        Margin="0, 30, 11, 0"/>
+
+                    <Button Text="Отмена" 
+                        CornerRadius="200" 
+                        BackgroundColor="#80544c" 
+                        TextColor="White" 
+                        x:Name="BtnBack"
+                        Clicked="BtnBack_Clicked_1"
+                        HeightRequest="49"
+                        WidthRequest="149"
+                        FontSize="9.6"
+                        Margin="0, 30, 11, 0"/>
+                </FlexLayout>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
